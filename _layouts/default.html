@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen">
+    <link rel="stylesheet" href="{{ '/assets/css/mobile.css' | relative_url }}" media="only screen and (max-width:640px)">
+    
+    <title>Unsubscribe NYC | Tools & Repos</title>
+    
+    {% seo %}
+  </head>
+
+  <body>
+    <div class="shell">
+      <header>
+        <div class="ribbon-outer">
+          <div class="ribbon-inner">
+            <h1>UNSUBSCRIBE NYC LLC</h1>
+            <h2>GitHub Tools & Repositories</h2>
+          </div>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </div>
+      </header>
+
+      <section id="main_content">
+        {{ content }}
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>&copy; {{ "now" | date: "%Y" }} Unsubscribe NYC LLC.</p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </footer>
+
+    </div>
+  </body>
+</html>

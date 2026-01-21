@@ -1,0 +1,6 @@
+title: Unsubscribe NYC LLC
+description: Open Source Tools & Repositories
+remote_theme: pages-themes/merlot
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag

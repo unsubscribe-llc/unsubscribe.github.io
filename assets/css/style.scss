@@ -1,0 +1,32 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* Unsubscribe NYC Theme: Deep Red & Black */
+
+body {
+  background-color: #050505; /* Near Black */
+  color: #cccccc;
+}
+
+header .ribbon-outer, footer .ribbon-outer {
+  background: #8b0000; /* Deep Blood Red */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+}
+
+header .ribbon-inner, footer .ribbon-inner {
+  background: #600000; /* Darker interior red */
+  border: 1px dashed #aa0000;
+}
+
+/* Make links pop against black */
+a { color: #ff3333; }
+
+/* Repository Cards (Optional styling for your list) */
+.repo-card {
+  border: 1px solid #333;
+  background: #111;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 5px solid #8b0000;
+}
