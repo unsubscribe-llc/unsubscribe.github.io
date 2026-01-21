@@ -2,31 +2,121 @@
 ---
 @import "{{ site.theme }}";
 
-/* Unsubscribe NYC Theme: Deep Red & Black */
+/* --- Modern Deep Red & Black Theme --- */
 
+/* 1. Global Styles & Typography */
 body {
-  background-color: #050505; /* Near Black */
-  color: #cccccc;
+  background-color: #0a0a0a; /* Deep Black Background */
+  color: #e0e0e0; /* Off-white text for readability */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
 }
 
-header .ribbon-outer, footer .ribbon-outer {
-  background: #8b0000; /* Deep Blood Red */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+a {
+  color: #ff3333; /* Bright Red for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  &:hover {
+    color: #ff6666; /* Lighter red on hover */
+  }
 }
 
-header .ribbon-inner, footer .ribbon-inner {
-  background: #600000; /* Darker interior red */
-  border: 1px dashed #aa0000;
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-/* Make links pop against black */
-a { color: #ff3333; }
+/* 2. Main Content Shell (The central container) */
+.shell {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #121212; /* Dark Charcoal for content area */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  border-radius: 8px;
+  overflow: hidden; /* Contains the ribbons */
+}
 
-/* Repository Cards (Optional styling for your list) */
+/* 3. Refined Deep Red Ribbon (Header & Footer) */
+header .ribbon-outer,
+footer .ribbon-outer {
+  background: linear-gradient(to bottom, #8b0000, #660000); /* Gradient for realism */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  border-bottom: 2px solid #4d0000;
+  padding: 25px 0; /* More breathing room */
+}
+
+header .ribbon-inner,
+footer .ribbon-inner {
+  background: transparent; /* Inner part is transparent for gradient */
+  border: none; /* Remove the old dashed border */
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+header h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #ffcccc; /* Lighter red for subtitle */
+  margin-top: 5px;
+}
+
+/* 4. Ribbon Tails (The folded ends) */
+header .left-tail, header .right-tail,
+footer .left-tail, footer .right-tail {
+  border-color: #4d0000 transparent transparent transparent; /* Darker, richer shadow */
+}
+
+/* 5. Main Content Section */
+#main_content {
+  padding: 40px;
+  background: #1c1c1c; /* Slightly lighter charcoal for contrast */
+}
+
+/* 6. Modern Repository Cards */
 .repo-card {
+  background-color: #252525; /* Dark card background */
   border: 1px solid #333;
-  background: #111;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-left: 5px solid #8b0000;
+  border-left: 5px solid #8b0000; /* Vibrant red accent */
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.repo-card:hover {
+  transform: translateY(-3px); /* Subtle lift effect */
+  box-shadow: 0 5px 15px rgba(139, 0, 0, 0.2); /* Red glow on hover */
+  border-color: #555;
+}
+
+.repo-card h4 a {
+  font-size: 1.4em;
+  color: #ff3333;
+  font-weight: 700;
+}
+
+.repo-card p {
+  color: #cccccc;
+  margin-top: 10px;
+}
+
+/* 7. Footer Styling */
+footer .ribbon-outer {
+  padding: 15px 0; /* Smaller ribbon for footer */
+  margin-top: 0; /* Connects seamlessly to content */
+}
+
+footer p {
+  color: #ffcccc;
+  font-size: 0.9em;
+  margin: 0;
 }
